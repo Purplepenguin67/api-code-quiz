@@ -35,8 +35,8 @@
 //Ssh
 
 //What is the most secure method to transmit an Api key?
-//URL paramter
-//Authorization header anser
+//URL parameter
+//Authorization header answer
 //Base64 encoding
 //Basic auth
 
