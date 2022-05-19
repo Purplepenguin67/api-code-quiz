@@ -17,27 +17,26 @@
 //your tech stack
 
 //The type of operation requested is determined by?
-
-//http PaymentMethod answer
-//http status Code
-//resouce path
-//query string
+//Http payment method answer
+//Http status Code
+//Resouce path
+//Query string
 
 //What metric tracks overall availability for your API
-//response time
-///time to first hello world
-//ttl
-//uptime anwer
+//Response time
+//Time to first hello world
+//Ttl
+//Uptime anwer
 
 //Which is a common command-line tool for using or exploring an API?
-//bash
-//curl answer
-//powershell
-//ssh
+//Bash
+//Curl answer
+//Powershell
+//Ssh
 
 //What is the most secure method to transmit an Api key?
 //URL paramter
-//authorization header anser
-//base64 encoding
-//basic auth
+//Authorization header anser
+//Base64 encoding
+//Basic auth
 
