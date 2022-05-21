@@ -5,7 +5,7 @@
 //5.You earn points for crrect answers
 
 //API traffic that is entilry internal to you organization is normally called?
-//inbound trafffic
+//inbound traffic
 //north-south traffic
 //internal trafffic correct 
 //eat-wet traffic
