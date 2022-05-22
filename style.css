@@ -1,5 +1,5 @@
 /*google fonts*/
-@import url('https://fonts.googleeapis.com/css2?family-poppins:wght@200;300;400;500;600;700&display-swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 {
     margin: 0;
     padding: 0;
@@ -19,8 +19,17 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0pc 4px 8px 0 rgba(0,0,0,2),
-                0pc 6px 20px 0 rgba(0,0,0,19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.info_box.activeInfo,
+.quiz_box.activeQuiz,
+.result_box.activeResult{
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 /* Button Styling*/
@@ -31,7 +40,7 @@ body{
     padding: 15px 30px;
     outline: none;
     border: none;
-    border-radius: 5px
+    border-radius: 5px;
     background: #fff;
     cursor: pointer;
 }
@@ -40,9 +49,11 @@ body{
     width: 540px;
     background: #fff;
     border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
     pointer-events: none;
-    transform: translate(-50%, -50%) scale(0.9);
+    transition: all 0.3s ease;
+    
 }
 
 .info_box .info_title{
@@ -54,7 +65,9 @@ body{
     padding: 0 30px;
     font-size: 20px;
     font-weight: 500;
+    border-radius: 5px 5px 0 0;
 }
+
 .info_box .info_list{
     padding: 15px 35px;
 }
@@ -82,12 +95,13 @@ body{
     margin: 0 5px;
     height: 40px;
     width: 100px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    color: #fff;
     font-size: 16px;
     font-weight: 500;
+    border: none;
     cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #007bff;
     transition: all 0.3s ease;
 }
 
@@ -253,18 +267,22 @@ footer .total_que span p:first-child{
     padding-left: 0px;
 }
 
-footer .next_btn{
+footer button{
     height: 40px;
     padding: 0 13px;
     font-size: 18px;
     font-weight: 400;
+    cursor: pointer;
     border: none;
     outline: none;
     color: #fff;
-    background: #007bff;
     border-radius: 5px;
+    background: #007bff;
     border: 1px solid #007bff;
-    cursor: pointer;
+    line-height: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.95);
     transition: all 0.3s ease;
 }
 
@@ -272,21 +290,25 @@ footer .next_btn:hover{
     background: #0263ca;
 }
 
-/*result box stylng*/
+footer button.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
 .result_box{
     background: #fff;
-    width: 450px;
-    padding: 25px 30px;
     border-radius: 5px;
     display: flex;
-    text-align: center;
+    padding: 25px 30px;
+    width: 450px;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
-    /*opacity*/
+    justify-content: center;
+    transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
     pointer-events: none;
-    transform: translate(-50%, -50%) scale(0.9);
+    transition: all 0.3s ease;
 }
 
 .result_box .icon{
@@ -330,5 +352,22 @@ footer .next_btn:hover{
     cursor: pointer;
     transition: all 0.3s ease;
 }
+2
+.buttons button.restart{
+    color: #fff;
+    background: #007bff;
+}
 
+.buttons button.restart:hover{
+    background: #0263ca;
+}
 
+.buttons button.quit{
+    color: #007bff;
+    background: #fff;
+}
+
+.buttons button.quit:hover{
+    color: #fff;
+    background: #007bff;
+}
