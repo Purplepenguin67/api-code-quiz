@@ -2,136 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API Quiz</title>
+    <title>API Code Quiz</title>
     <link rel="stylesheet" href="style.css">
-    <!--Font awesome icons-->
+    <!-- FontAweome CDN Link for Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
-    <!--Start Button-->
+    <!-- Quiz button -->
     <div class="start_btn"><button>Start Quiz</button></div>
 
-    <!--Info Box-->
+    <!-- Info Box -->
     <div class="info_box">
-        <div class="info_title">ome Rules of this Quiz</div>
-        <div class="info_list">
-            <div class="info">1. You will have only <span>20 seconds</span> per each question</div>
-            <div class="info">2. You can not reselect an answer</div>
-            <div class="info">3. You can not select answe after time runs out</div>
-            <div class="info">4. You cant exit quiz while playing</div>
-            <div class="info">5. You earn points for correct answers</div>
+        <div class="info-title"><span>Rules of this Quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. You will have only <span>10 seconds</span> per each question.</div>
+            <div class="info">2. Once you select your answer, it can't be undone.</div>
+            <div class="info">3. You can't select any option once time goes off.</div>
+            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+            <div class="info">5. You'll get points on the basis of your correct answers.</div>
         </div>
-        <div class="buttons"></div>
+        <div class="buttons">
             <button class="quit">Exit Quiz</button>
             <button class="restart">Continue</button>
         </div>
     </div>
 
-    <!--Quiz Box-->
+    <!-- Quiz Box -->
     <div class="quiz_box">
         <header>
             <div class="title">API Code Quiz</div>
             <div class="timer">
                 <div class="time_left_txt">Time Left</div>
-                <div class="timer_sec">20</div>
+                <div class="timer_sec">10</div>
             </div>
+            <div class="time_line"></div>
         </header>
         <section>
             <div class="que_text">
-                <span>API traffic that is entilry internal to you organization is normally called?</span>
+                
             </div>
             <div class="option_list">
-                    <div class="option">
-                        <span>Inbound traffic</span>
-                        <div class="icon cross"><i class="fas fa-times"></i></div>
-                    </div>
-
-            <div class="option">
-                        <span>North-south traffic</span>
-                        <div class="icon cross"><i class="fas fa-times"></i></div>
-                    </div>
-                    <div class="option">
-                        <span>Internal trafffic correct</span>
-                        <div class="icon tick"><i class="fas fa-check"></i></div>
-                    </div>
-                    <div class="option">
-                        <span>Eat-wet traffic</span>
-                        <div class="icon cross"><i class="fas fa-times"></i></div>
-                    </div>
-                   
-                    <div class="que_text">
-                        <span>API traffic that is entilry internal to you organization is normally called?</span>
-                    </div>
-                    <div class="option_list">
-                            <div class="option">
-                                <span>Inbound traffic</span>
-                                <div class="icon cross"><i class="fas fa-times"></i></div>
-                            </div>
-        
-                    <div class="option">
-                                <span>North-south traffic</span>
-                                <div class="icon cross"><i class="fas fa-times"></i></div>
-                            </div>
-                            <div class="option">
-                                <span>Internal trafffic correct</span>
-                                <div class="icon tick"><i class="fas fa-check"></i></div>
-                            </div>
-                            <div class="option">
-                                <span>Eat-wet traffic</span>
-                                <div class="icon cross"><i class="fas fa-times"></i></div>
-                            </div>
-                            <div class="que_text">
-                                <span>What should your API documentation describe</span>
-                            </div>
-                            <div class="option_list">
-                                    <div class="option">
-                                        <span>JSON</span>
-                                        <div class="icon cross"><i class="fas fa-times"></i></div>
-                                    </div>
                 
-                            <div class="option">
-                                        <span>HTML</span>
-                                        <div class="icon cross"><i class="fas fa-times"></i></div>
-                                    </div>
-                                    <div class="option">
-                                        <span>common use casses</span>
-                                        <div class="icon tick"><i class="fas fa-check"></i></div>
-                                    </div>
-                                    <div class="option">
-                                        <span>your tech stack</span>
-                                        <div class="icon cross"><i class="fas fa-times"></i></div>
-                                    </div>
-
-
+            </div>
         </section>
-<!--Quiz Box Footer-->
-<footer>
-    <div class="total_que">
-        <span><p>1</p>Of<p>5</p>Questions</span>
-    </div>
-    <button class="next_btn">Next question</button>
-</footer>
-</div>
 
-<!--Score Box-->
-<div class="result_box">
-    <div class="icon">
-        <i class="fas fa-crown"></i>
+        <!-- footer-->
+        <footer>
+            <div class="total_que">
+                
+            </div>
+            <button class="next_btn">Next Que</button>
+        </footer>
     </div>
-    <div class="complete_text">You have Finished the Quiz!</div>
-    <div class="score_text">
-        <span>Sorry, You got only <p>2</p>out of<p>5</p></span>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">You've completed the Quiz!</div>
+        <div class="score_text">
+            <!-- Results-->
+        </div>
+        <div class="buttons">
+            <button class="restart">Replay Quiz</button>
+            <button class="quit">Quit Quiz</button>
+        </div>
     </div>
-   <div class="buttons">
-       <button class="restart">Replay Quiz</button>
-       <button class="quit">Quit Quiz</button>
-    </div>
-</div>
 
+    
+    <script src="js/questions.js"></script>
 
+    
+    <script src="js/script.js"></script>
 
-        <script src="script.js" ></script>
 </body>
 </html>
