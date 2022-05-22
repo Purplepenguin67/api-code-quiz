@@ -7,7 +7,7 @@
 //API traffic that is entilry internal to you organization is normally called?
 //inbound traffic
 //north-south traffic
-//internal trafffic correct 
+//internal traffic correct 
 //eat-wet traffic
 
 //What should your API documentation describe?
